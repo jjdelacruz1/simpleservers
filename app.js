@@ -12,6 +12,4 @@ app.get('/ping', function (require, response, nextFn) {
   nextFn()
 })
 
-app.listen(3000, function() {
-  console.log('This is my server!')
-})
+app.listen(3000)
