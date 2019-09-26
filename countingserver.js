@@ -3,18 +3,25 @@ const app = express()
 
 var counter = 0
 
+app.use(express.static(__dirname + '/public'));
+
 app.post('/increment', function (req, res, next) {
   counter++
-  res.send('This is the new count added: ' + counter)
+  res.send(`${counter}`)
 })
 
 app.post('/decrement', function (req, res, next) {
   counter--
-  res.send('This is the new count subtracted: ' + counter)
+  res.send(`${counter}`)
+})
+
+app.post('/reset', function (req, res, next) {
+  counter = 0
+  res.send(`${counter}`)
 })
 
 app.get('/value', function (req, res, next) {
-  res.send('This is the final value: ' + counter)
+  res.send('This is the final value: ' + counter) 
 })
 
 app.listen(3000)
