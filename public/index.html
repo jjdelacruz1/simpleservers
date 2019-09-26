@@ -6,14 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Counting Page</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Counting Page</h1>
-  <div> This is the count = </div>
-  <div id="counter">0</div>
-  <button id="inc">Increment</button>
-  <button id="dec">Decrement</button>
-  <button id="reset">Reset</button>
+    <canvas id="canvas">Canvas is not supported in your browser.</canvas>
+    <canvas id="canvas2">Canvas is not supported in your browser.</canvas>
+  <div id="whole">
+    <h1>Counting Page</h1>
+    <div>This is the count</div>
+    <div id="counter">0</div>
+    <div class="buttons">
+      <button id="inc">ADD ONE</button>
+      <button id="dec">SUBTRACT ONE</button>
+      <button id="reset">RESET</button>
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>
