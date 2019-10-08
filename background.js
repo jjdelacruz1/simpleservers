@@ -1,52 +1,5 @@
-const increment = document.getElementById("inc")
-const decrement = document.getElementById("dec")
-const reset = document.getElementById("reset")
-const output = document.getElementById("counter")
-// const background = require('./background.js')
-
-increment.addEventListener("click", function() {
-  console.log("Clicked increment")
-  fetch('/increment', {
-    method: 'POST'
-  })
-    .then(function (res) {
-      return res.json()
-    })
-    .then(function (res) {
-      output.innerHTML = res
-      return
-    })
-})
-
-decrement.addEventListener("click", function() {
-  console.log("Clicked decrement")
-  fetch('/decrement', {
-    method: 'POST'
-  })
-    .then(function (res) {
-      return res.json()
-    })
-    .then(function (res) {
-      output.innerHTML = res
-      return
-    })
-})
-
-reset.addEventListener("click", function() {
-  console.log("Clicked reset")
-  fetch('/reset', {
-    method: 'POST'
-  })
-    .then(function (res) {
-      return res.json()
-    })
-    .then(function (res) {
-      output.innerHTML = res
-      return
-    })
-})
-
-var canvas = document.getElementById( 'canvas' ),
+const background = {
+  var canvas = document.getElementById( 'canvas' ),
 		ctx = canvas.getContext( '2d' ),
     canvas2 = document.getElementById( 'canvas2' ),
     ctx2 = canvas2.getContext( '2d' ),
@@ -124,3 +77,6 @@ var canvas = document.getElementById( 'canvas' ),
     }
 
   update();
+  }
+
+  module.exports = background
