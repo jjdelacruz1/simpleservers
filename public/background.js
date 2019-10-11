@@ -1,4 +1,4 @@
-const background = {
+
   var canvas = document.getElementById( 'canvas' ),
 		ctx = canvas.getContext( '2d' ),
     canvas2 = document.getElementById( 'canvas2' ),
@@ -77,6 +77,3 @@ const background = {
     }
 
   update();
-  }
-
-  module.exports = background
