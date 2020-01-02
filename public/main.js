@@ -18,6 +18,7 @@ increment.addEventListener("click", function() {
     })
 })
 
+
 decrement.addEventListener("click", function() {
   console.log("Clicked decrement")
   fetch('/decrement', {
