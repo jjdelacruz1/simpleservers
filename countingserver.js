@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express()
+const express = require('express')
+const path = require('path')
+const PORT = process.env.PORT || 5000
 
 var counter = 0
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.post('/increment', function (req, res, next) {
   counter++
@@ -24,4 +27,4 @@ app.get('/value', function (req, res, next) {
   res.send('This is the final value: ' + counter) 
 })
 
-app.listen(3000)
+app.listen(PORT)
